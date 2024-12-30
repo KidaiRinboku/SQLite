@@ -9,7 +9,8 @@ public class DatabaseManager : MonoBehaviour
     void Start()
     {
         // データベースファイルへのパス
-        var dbPath = Path.Combine(Application.persistentDataPath, "game.db");
+        //var dbPath = Path.Combine(Application.persistentDataPath, "game.db");
+        var dbPath = Path.Combine("game.db");
         var db = new SQLiteConnection(dbPath);
         db.Execute("PRAGMA foreign_keys = ON");
 
